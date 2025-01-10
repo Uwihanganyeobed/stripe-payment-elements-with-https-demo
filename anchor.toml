@@ -1,0 +1,10 @@
+[lcl-host]
+realm-apid = 'localhost'
+
+[org]
+apid = 'uwihanganyeobed'
+
+[service]
+apid = 'stripe-payment-elements-with-https-demo'
+category = 'javascript'
+cert-style = 'acme'

@@ -17,7 +17,7 @@ export default function Home() {
       <div>
       <h1 className='text-4xl font-extrabold mb-2'>Major Vargas</h1>      
       <h2 className='text-2xl'>
-        has requested <span className='font-bold'>${amount}</span>
+        has requested amount <span className='font-bold text-gray-800'>${amount}</span>
       </h2>
       </div>
       <Elements stripe={stripePromise}

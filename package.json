@@ -1,4 +1,5 @@
 {
+  "$schema": "./tmp/acme/content-v2/sha512/4e/77/b384cf72def6713772cb5d584ec0c5092fdc36a7ca33d56f95ffde794a2272b710a43e4c6f7f3df7cec5b7db36a47dfc63c2a42937c997fb4acd40c023a3",
   "name": "stripe-payment-elements-with-https-demo",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +12,7 @@
   "dependencies": {
     "@stripe/react-stripe-js": "^3.1.1",
     "@stripe/stripe-js": "^5.5.0",
+    "anchor-pki": "^0.3.2",
     "next": "15.1.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
