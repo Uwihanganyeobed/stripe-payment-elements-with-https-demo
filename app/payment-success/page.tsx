@@ -1,8 +1,14 @@
-export default function PaymentSuccess({
-  searchParams: { amount },
-}: {
-  searchParams: { amount: string };
-}) {
+import { NextPage } from 'next';
+
+interface PageProps {
+  searchParams: {
+    amount?: string;
+  };
+}
+
+const PaymentSuccess: NextPage<PageProps> = ({ searchParams }) => {
+  const { amount = '0' } = searchParams;
+
   return (
     <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-blue-500 to-purple-500">
       <div className="mb-10">
@@ -15,4 +21,6 @@ export default function PaymentSuccess({
       </div>
     </main>
   );
-}
+};
+
+export default PaymentSuccess;
