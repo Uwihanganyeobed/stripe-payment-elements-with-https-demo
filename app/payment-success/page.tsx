@@ -1,12 +1,18 @@
-import { NextPage } from 'next';
+// app/payment-success/page.tsx
+import { Metadata } from 'next';
 
-interface PageProps {
+type Props = {
   searchParams: {
     amount?: string;
   };
-}
+};
 
-const PaymentSuccess: NextPage<PageProps> = ({ searchParams }) => {
+export const metadata: Metadata = {
+  title: 'Payment Success',
+  description: 'Your payment has been processed successfully',
+};
+
+export default function PaymentSuccess({ searchParams }: Props) {
   const { amount = '0' } = searchParams;
 
   return (
@@ -21,6 +27,4 @@ const PaymentSuccess: NextPage<PageProps> = ({ searchParams }) => {
       </div>
     </main>
   );
-};
-
-export default PaymentSuccess;
+}
