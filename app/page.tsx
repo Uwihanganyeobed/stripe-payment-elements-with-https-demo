@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main className='max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-blue-500 to-purple-500'>
       <div>
-      <h1 className='text-4xl font-extrabold mb-2'>Major Vargas</h1>      
+      <h1 className='text-4xl font-extrabold mb-2'>Obed Vargas</h1>      
       <h2 className='text-2xl'>
         has requested amount <span className='font-bold text-gray-800'>${amount}</span>
       </h2>
