@@ -15,6 +15,7 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 export default function Home() {
   const amount = 49.99;
 
+
   const appearance = {
     theme: 'stripe',
     variables: {
