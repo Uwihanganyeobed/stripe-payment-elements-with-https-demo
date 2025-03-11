@@ -1,19 +1,28 @@
 // app/payment-success/page.tsx
 import { Metadata } from 'next';
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 type Props = {
-  searchParams: {
-    amount?: string;
-  };
+  params: { [key: string]: string | string[] | undefined };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
+/* eslint-enable @typescript-eslint/no-explicit-any */
 
 export const metadata: Metadata = {
   title: 'Payment Success',
   description: 'Your payment has been processed successfully',
 };
 
-export default function PaymentSuccess({ searchParams }: Props) {
-  const { amount = '0' } = searchParams;
+interface PageProps {
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default async function PaymentSuccess({ searchParams }: PageProps) {
+  const amount = typeof searchParams.amount === 'string' 
+    ? searchParams.amount 
+    : Array.isArray(searchParams.amount) 
+      ? searchParams.amount[0] 
+      : '0';
 
   return (
     <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-blue-500 to-purple-500">
