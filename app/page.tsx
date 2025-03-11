@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-blue-500 to-purple-500">
       <div className="mb-10">
-        <h1 className="text-4xl font-extrabold mb-2">Make a Payment</h1>
+        <h1 className="text-4xl font-extrabold mb-2">Make a Stunning Stripe Payment</h1>
         {!showPayment ? (
           <form onSubmit={handleSubmit} className="mt-8 max-w-md mx-auto">
             <div className="flex flex-col space-y-4">
