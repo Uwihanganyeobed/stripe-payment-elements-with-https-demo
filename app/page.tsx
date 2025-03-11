@@ -5,6 +5,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutPage from "@/components/CheckoutPage";
 import { useState } from "react";
+import Image from 'next/image';
 
 if (!process.env.NEXT_PUBLIC_STRIPE_PUBLIC) {
   throw new Error("NEXT_PUBLIC_STRIPE_PUBLIC is not defined");
@@ -23,6 +24,15 @@ export default function Home() {
 
   return (
     <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-blue-500 to-purple-500">
+      <div className="flex justify-center mb-6">
+        <Image
+          src="/stripe-white.svg"
+          alt="Stripe Logo"
+          width={120}
+          height={40}
+          className="mb-4"
+        />
+      </div>
       <div className="mb-10">
         <h1 className="text-4xl font-extrabold mb-2">Make a Stunning Stripe Payment</h1>
         {!showPayment ? (
