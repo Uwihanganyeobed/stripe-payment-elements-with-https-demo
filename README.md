@@ -45,7 +45,7 @@ CLERK_SECRET_KEY=your_clerk_secret_key
 1. Clone the repository:
 
 bash
-git clone https://github.com/yourusername/stripe-payment-integration.git
+git clone https://github.com/Uwihanganyeobed/stripe-payment-elements-with-https-demo.git
 cd stripe-payment-integration
 
 2. Install dependencies:
@@ -128,7 +128,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-For support, email your-email@example.com or open an issue in the repository.
+For support, email obeduwihanganye52@gmail.com or open an issue in the repository.
 This README provides:
 Project overview
 Setup instructions
