@@ -13,16 +13,14 @@ export const metadata: Metadata = {
   description: 'Your payment has been processed successfully',
 };
 
-interface PageProps {
+type SearchParamsProps = {
   searchParams: { [key: string]: string | string[] | undefined };
-}
+};
 
-export default async function PaymentSuccess({ searchParams }: PageProps) {
-  const amount = typeof searchParams.amount === 'string' 
-    ? searchParams.amount 
-    : Array.isArray(searchParams.amount) 
-      ? searchParams.amount[0] 
-      : '0';
+export default function PaymentSuccess({ searchParams }: SearchParamsProps) {
+  const amount = Array.isArray(searchParams.amount) 
+    ? searchParams.amount[0] 
+    : searchParams.amount || '0';
 
   return (
     <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-blue-500 to-purple-500">
